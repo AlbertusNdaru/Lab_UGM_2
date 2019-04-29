@@ -19,7 +19,7 @@ class Login extends CI_Controller{
 		}
 		else
 		{
-        $this->load->view('F_admin/login');
+        $this->load->view('F_admin/login1');
         }
     }
 

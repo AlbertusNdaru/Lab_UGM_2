@@ -117,7 +117,7 @@
                 <ul class="dropdown-menu">
                     <li><a href="#">Profile</a></li>
                     <li class="divider"></li>
-                    <li><a href="<?= base_url('Admin/Login/logout')?>">Logout</a></li>
+                    <li><a href="<?= base_url('M_admin/Login/logout')?>">Logout</a></li>
                 </ul>
             </div>
             <!-- user dropdown ends -->

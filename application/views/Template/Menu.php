@@ -7,7 +7,7 @@
                     </div>
                     <ul class="nav nav-pills nav-stacked main-menu">
                         <li class="nav-header">Main</li>
-                        <li><a class="nav-link" href="<?= base_url('Admin/Dashboard')?>"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
+                        <li><a class="nav-link" href="<?= base_url('M_Admin/Dashboard')?>"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
                         
                         <li class="nav-item ">
                                 <a class="nav-link collapsed" data-toggle="collapse" data-target="#" href="#FormMaster">
