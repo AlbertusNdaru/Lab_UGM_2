@@ -48,12 +48,15 @@
 					</div>
 
 					<div class="container-login100-form-btn m-t-32">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn m-r-10">
 							Login
 						</button>
+					</form>
+						<a class="login100-form-btn" href="<?= base_url('M_landingpage/Reg_user_mahasiswa')?>">
+							Register
+						</a>
 					</div>
 
-				</form>
 			</div>
 		</div>
 	</div>

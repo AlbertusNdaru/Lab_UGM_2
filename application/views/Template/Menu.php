@@ -48,7 +48,7 @@
                                     </li>
                                     <?php }?>
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="<?= base_url()?>examples/pages/rtl.html">
+                                        <a class="nav-link" href="<?= base_url('M_user_mahasiswa/M_user_mahasiswa/get_user_mahasiswa')?>">
                                         <span> User Mahasiswa</span>     
                                         </a>
                                     </li>

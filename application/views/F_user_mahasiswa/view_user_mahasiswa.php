@@ -4,7 +4,7 @@
                 <a href="#">Home</a>
             </li>
             <li>
-                <a href="#">Data User</a>
+                <a href="#">Data User Mahasiswa</a>
             </li>
         </ul>
     </div>
@@ -13,7 +13,7 @@
     <div class="box col-md-12">
     <div class="box-inner">
     <div class="box-header well" data-original-title="">
-        <h2><i class="glyphicon glyphicon-user"></i> Data User</h2>
+        <h2><i class="glyphicon glyphicon-user"></i> Data User Mahasiswa</h2>
 
         <div class="box-icon">
             <a href="#" class="btn addKaryawan btn-round btn-default"><i class="glyphicon glyphicon-plus-sign"></i></a>
@@ -28,39 +28,39 @@
             <thead>
                 <tr>
                     <th>Username</th>
-                    <th>Usergroup</th>
-                    <th>Karyawan Name</th>
+                    <th>NIM</th>
+                    <th>Name</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($user as $k) { ?>
+                <?php foreach($user_mahasiswa as $k) { ?>
                     <tr>
                         <td><?= $k->Username?></td>
-                        <td><?= $k->UsergroupDes?></td>
-                        <td><?= $k->KaryawanName?></td>
+                        <td><?= $k->NIM?></td>
+                        <td><?= $k->Name?></td>
                         <td class="center">
                             <span class="label-success label <?php if($k->Status=='Aprove') echo 'label-default'; else echo 'label-danger';?>"><?= $k->Status?></span>
                         </td>
                         <td class="center">
                         <?php if ($_SESSION['Admin']->Usergroup_id == 1) {?>
                             <?php if ($k->Status == "Rejected") {?>
-                                <a class="btn btn-success" style="width: 94px;" href="<?= base_url('M_user/M_user/editStatususer?id='.$k->Id.'&status=Aprove')?>">
+                                <a class="btn btn-success" style="width: 94px;" href="<?= base_url('M_user_mahasiswa/M_user_mahasiswa/editStatususermahasiswa?id='.$k->Id.'&status=1')?>">
                                     <i class="glyphicon glyphicon-ok icon-white"></i>
                                     Aprrove
                             <?php } else {?>
-                                <a class="btn btn-danger" style="width: 94px;" href="<?= base_url('M_user/M_user/editStatususer?id='.$k->Id.'&status=Rejected')?>">
+                                <a class="btn btn-danger" style="width: 94px;" href="<?= base_url('M_user_mahasiswa/M_user_mahasiswa/editStatususermahasiswa?id='.$k->Id.'&status=0')?>">
                                         <i class="glyphicon glyphicon-remove icon-white"></i>
                                     Reject
                             <?php }?>
                                 </a>
                         <?php }?>
-                            <a class="btn btn-info" href="<?= base_url('M_user/M_user/viewFormEdituser?id='.$k->Id.'')?>">
+                            <a class="btn btn-info" href="<?= base_url('M_user_mahasiswa/M_user_mahasiswa/viewFormEditusermahasiswa?id='.$k->Id.'')?>">
                                 <i class="glyphicon glyphicon-edit icon-white"></i>
                                 Edit
                             </a>
-                            <a class="btn btn-danger" href="<?= base_url('M_user/M_user/deleteuser?id='.$k->Id.'')?>">
+                            <a class="btn btn-danger" href="<?= base_url('M_user_mahasiswa/M_user_mahasiswa/deleteusermahasiswa?id='.$k->Id.'')?>">
                                 <i class="glyphicon glyphicon-trash icon-white"></i>
                                 Delete
                             </a>
@@ -76,7 +76,7 @@
         </div><!--/row-->
     </div><!--/span-->
 
-    <?php include "add_user.php";?>
+    <?php include "add_user_mahasiswa.php";?>
 
 <script>
     $('.addKaryawan').click(function (e) {

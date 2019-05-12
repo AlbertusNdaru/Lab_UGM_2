@@ -3,10 +3,9 @@ class Model_user_mahasiswa extends CI_Model{
 
     function get_user_mahasiswa()
     {
-        $this->db->select('a.*, b.Description as user_mahasiswagroupDes, c.Name as KaryawanName');
+        $this->db->select('a.*, b.NIM , b.Name');   
         $this->db->from('tb_user_mahasiswa as a');
-        $this->db->join('tb_user_mahasiswagroup as b', 'b.Id =a.user_mahasiswagroup_id');
-        $this->db->join('tb_karyawan as c ',' c.Id=a.Karyawan_id');        
+        $this->db->join('tb_mahasiswa as b' , 'b.Id=a.Mahasiswa_id');    
         $datauser_mahasiswa = $this->db->get()->result();
         return $datauser_mahasiswa;
     }
