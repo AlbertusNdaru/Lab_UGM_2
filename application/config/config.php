@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://AlbertusNdaru/Lab_UGM_2/';
+$config['base_url']	= 'http://localhost/Lab_UGM_2/';
 /*
 |--------------------------------------------------------------------------
 | Index File
